@@ -110,6 +110,7 @@ public class ClassA {
   }
 ```
 ### gradle 2.2以上
+```
 dependencies {
       ...
       api 'com.google.dagger:dagger:2.4'
@@ -118,7 +119,7 @@ dependencies {
       api 'org.glassfish:javax.annotation:10.0-b28'
       ...
   }
-
+```
 
 ## 2.使用Dagger2
 
