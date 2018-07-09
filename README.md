@@ -81,6 +81,8 @@ public class ClassA {
 
 ## 1.如何引入Dagger2
 
+### gradle 2.2 以下
+
 配置apt插件(在build.gradle(Project:xxx)中添加如下代码)
 ```
   dependencies {
@@ -89,6 +91,8 @@ public class ClassA {
       classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
   }
+  
+  
 ```
 添加依赖(在build.gradle(Module:app)中添加如下代码)
 ```
@@ -105,6 +109,17 @@ public class ClassA {
       ...
   }
 ```
+### gradle 2.2以上
+dependencies {
+      ...
+      api 'com.google.dagger:dagger:2.4'
+      annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+      //java注解
+      api 'org.glassfish:javax.annotation:10.0-b28'
+      ...
+  }
+
+
 ## 2.使用Dagger2
 
 下面用一个栗子来说明，如何使用Dagger2，需要说明的是，这个栗子是基于mvp模式的，所以如果还不了解mvp的话，可以先去了解mvp，再继续看下面的内容。
